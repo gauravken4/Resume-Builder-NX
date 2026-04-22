@@ -18,8 +18,18 @@ from tools.resume_builder import ResumeBuilder
 app = FastAPI(
     title="Resume Builder API",
     version="1.0.0"
+    from fastapi.middleware.cors import CORSMiddleware
+
 )
 
+# ✅ ADD CORS HERE
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # -----------------------------
 # 📦 Request / Response Models
@@ -72,8 +82,4 @@ def build_resume(payload: ResumeRequest) -> ResumeResponse:
             missing_required_context=missing_required_context
         )
 
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Error generating resume: {str(e)}"
-        )
+  
