@@ -1,0 +1,61 @@
+{
+  "target_role_or_jd": "Senior Backend Engineer - payments platform",
+  "experience_summary": "7 years building backend systems for fintech and SaaS",
+  "career_level": "senior",
+  "special_context": "US work authorized",
+  "years_experience": 7,
+  "profile": {
+    "name": "Taylor Candidate",
+    "location": "Austin, TX",
+    "email": "taylor@example.com",
+    "phone": "+1-555-555-5555",
+    "links": [
+      {"label": "LinkedIn", "url": "https://linkedin.com/in/taylor"},
+      {"label": "GitHub", "url": "https://github.com/taylor"}
+    ]
+  },
+  "summary": "Senior backend engineer with 7 years of experience shipping distributed systems in regulated environments. Delivered measurable reliability and cost improvements across payment processing and internal platform services. Strong ownership in architecture, incident response, and cross-team execution.",
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Acme Payments",
+      "start": "June 2021",
+      "end": "Present",
+      "location": "Austin, TX",
+      "technologies": ["Python", "Go", "PostgreSQL", "Kafka", "AWS"],
+      "bullets": [
+        "Reduced p95 API latency by 37% for 2.4M monthly payment requests by redesigning idempotency and retry flows in Go.",
+        "Cut annual infrastructure spend by $180K by migrating 14 high-traffic services to right-sized autoscaling policies on AWS.",
+        "Improved production incident MTTR by 42% across a 9-engineer team by introducing runbooks, SLO dashboards, and alert tuning."
+      ]
+    }
+  ],
+  "languages_and_technologies": {
+    "languages": ["Python", "Go", "SQL", "TypeScript"],
+    "frameworks": ["FastAPI", "gRPC"],
+    "platforms": ["AWS", "Docker", "Kubernetes"],
+    "tools": ["Terraform", "GitHub Actions"]
+  },
+  "projects": [
+    {
+      "name": "Transaction Replay Simulator",
+      "link": "https://github.com/taylor/txn-replay",
+      "date": "2025",
+      "technologies": ["Python", "Kafka", "ClickHouse"],
+      "bullets": [
+        "Built a replay simulation harness that validated 11 failure scenarios and prevented 3 recurring reconciliation defects before production release."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "school": "State University",
+      "year": "2019"
+    }
+  ],
+  "extracurricular": [
+    "Maintainer of an open source observability plugin used by 400+ GitHub stars."
+  ],
+  "interests": ["Distance running", "Mentoring early-career engineers"]
+}
