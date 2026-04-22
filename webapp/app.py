@@ -8,6 +8,7 @@ from __future__ import annotations
 from typing import Any, Dict, List
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware  # ✅ CORRECT PLACE
 from pydantic import BaseModel, Field
 
 # Import your resume builder logic
@@ -18,14 +19,12 @@ from tools.resume_builder import ResumeBuilder
 app = FastAPI(
     title="Resume Builder API",
     version="1.0.0"
-    from fastapi.middleware.cors import CORSMiddleware
-
 )
 
 # ✅ ADD CORS HERE
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # later restrict to your domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -82,4 +81,8 @@ def build_resume(payload: ResumeRequest) -> ResumeResponse:
             missing_required_context=missing_required_context
         )
 
-  
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error generating resume: {str(e)}"
+        )
